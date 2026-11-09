@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff8fb8" />
+  <title>For You ♡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <!-- PAGE 1: SECRET CODE -->
+  <main id="lockPage" class="page active">
+    <section class="lock-card">
+      <p class="tiny-label">a little surprise for you</p>
+      <h1>Enter Code</h1>
+      <div id="codeDisplay" class="code-display" aria-label="Secret code"></div>
+      <p class="hint">Hint: <span id="hintText">something only we would know ♡</span></p>
+
+      <div class="keypad" aria-label="Number keypad">
+        <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+        <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+        <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+        <button data-key=".">•</button><button data-key="0">0</button><button data-key="DEL">DEL</button>
+      </div>
+      <p id="errorText" class="error" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!-- ACCESS GRANTED -->
+  <div id="accessModal" class="modal hidden">
+    <div class="access-card">
+      <div class="sparkle">♡</div>
+      <h2>Access Granted!</h2>
+      <div class="access-photo placeholder-photo">
+  <img src="photos/p6.jpg" alt="My photo">
+</div>
+      
+      <p>Congrats, you passed! ♡</p>
+      <button id="proceedBtn" class="primary-btn">Proceed</button>
+    </div>
+  </div>
+
+  <!-- PAGE 2: ENVELOPE -->
+  <main id="mailPage" class="page">
+    <section class="mail-section">
+      <p class="tiny-label">something I made just for you</p>
+      <h1>Ate may message ka ate</h1>
+      <button id="envelopeBtn" class="envelope" aria-label="Open the love letter">
+        <span class="envelope-paper"></span>
+        <span class="envelope-flap"></span>
+        <span class="seal">♡</span>
+      </button>
+      <p class="click-note">Click the seal to open!</p>
+    </section>
+  </main>
+
+  <!-- LETTER -->
+  <div id="letterModal" class="modal hidden">
+    <div class="letter-card">
+      <button id="closeLetter" class="close-btn" aria-label="Close">×</button>
+      <p class="tiny-label">for my favorite person</p>
+      <h2>A little letter for you ♡</h2>
+      <div class="letter-paper">
+        <p>Dear my princess, baby , maem, boss ana</p>
+        <p>Its me again your makulit na suitor, im sooo thankful na you came to my life and
+          sorry minsan kung nakukulitan ka sakin and also di ko na papahabain to since di naman me
+          mahilig mag express into words but into action. Ipaparamdam ko sayo ang pag mamahal na hindi puro
+          pangako at hindi sa una magaling. Pero di pwedeng pabayaan natin acads natin kaya alam mo yun super
+          supported ako sa lahat ng ginagawa mo also sa acads. Goood luckkkk my future Nurse/Doc
+        </p>
+        <p class="signature">— Sidrick</p>
+      </div>
+      <button id="memoriesBtn" class="primary-btn">See our memories</button>
+    </div>
+  </div>
+
+  <!-- PAGE 3: MEMORIES -->
+  <main id="memoriesPage" class="page">
+    <section class="content-section">
+      <p class="tiny-label">little moments I want to keep</p>
+      <h1>Your Pics ♡</h1>
+      <p class="section-subtitle">Mga urban legends mo.</p>
+
+      <div class="memory-stage">
+        <button class="gallery-arrow gallery-prev" aria-label="Previous photo">‹</button>
+        <div class="memory-track" id="memoryTrack">
+          <figure class="memory-card photo-card active" data-index="0">
+            <img src="photos/p1.jpg" alt="Memory 1" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="1">
+            <img src="photos/p2.jpg" alt="Memory 2" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="2">
+            <img src="photos/p3.jpg" alt="Memory 3" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you  ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="3">
+            <img src="photos/p4.jpg" alt="Memory 4" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="4">
+            <img src="photos/p5.jpg" alt="Memory 5" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="5">
+            <img src="photos/p6.jpg" alt="Memory 6" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="6">
+            <img src="photos/p7.jpg" alt="Memory 7" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of you ♡</figcaption>
+          </figure>
+          <figure class="memory-card photo-card" data-index="7">
+            <img src="photos/p8.jpg" alt="Memory 8" onerror="this.src='photos/placeholder.svg'">
+            <figcaption>Photo of me ♡</figcaption>
+          </figure>
+        </div>
+        <button class="gallery-arrow gallery-next" aria-label="Next photo">›</button>
+      </div>
+
+      <div class="gallery-dots" id="galleryDots">
+        <button class="gallery-dot active" data-index="0" aria-label="Photo 1"></button>
+        <button class="gallery-dot" data-index="1" aria-label="Photo 2"></button>
+        <button class="gallery-dot" data-index="2" aria-label="Photo 3"></button>
+        <button class="gallery-dot" data-index="3" aria-label="Photo 4"></button>
+        <button class="gallery-dot" data-index="4" aria-label="Photo 5"></button>
+        <button class="gallery-dot" data-index="5" aria-label="Photo 6"></button>
+        <button class="gallery-dot" data-index="6" aria-label="Photo 7"></button>
+        <button class="gallery-dot" data-index="7" aria-label="Photo 8"></button>
+      </div>
+
+      <p class="swipe-note">Tap a photo to make it bigger · swipe on phone ♡</p>
+
+      <button id="musicBtn" class="primary-btn">Continue to our music ♫</button>
+
+    </section>
+  </main>
+
+  <!-- PHOTO LIGHTBOX -->
+  <div id="photoLightbox" class="photo-lightbox hidden">
+    <button id="closePhoto" class="lightbox-close" aria-label="Close">×</button>
+    <button id="lightboxPrev" class="lightbox-arrow left" aria-label="Previous">‹</button>
+    <img id="lightboxImage" src="" alt="Selected memory">
+    <button id="lightboxNext" class="lightbox-arrow right" aria-label="Next">›</button>
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <!-- PAGE 4: MUSIC -->
+  <main id="musicPage" class="page">
+    <section class="content-section music-section">
+      <p class="tiny-label">songs that make me think of you</p>
+      <h1>Our Music ♡</h1>
+
+      <div class="music-grid">
+        <article class="music-card">
+          <div class="music-heading">
+            <span class="music-icon">♪</span>
+            <div>
+              <h2>A song that reminds me of you</h2>
+            </div>
+          </div>
+          <iframe data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5TpPSTItCwtZ8Sltr3vdzm?utm_source=generator&theme=0&si=bb59ed19e2d64b46"
+            width="100%" height="352" frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </article>
+
+        <article class="music-card">
+          <div class="music-heading">
+            <span class="music-icon">♡</span>
+            <div>
+              <h2>Isa sa favorite song mo</h2>
+            </div>
+          </div>
+          <iframe data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5mtTAScDytxMMqZj14NmlN?utm_source=generator&si=3e2f8bdf7b1044ae"
+            width="100%" height="352" frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </article>
+      </div>
+
+      <button id="finalBtn" class="primary-btn">One last thing ♡</button>
+    </section>
+  </main>
+
+  <!-- FINAL -->
+  <main id="finalPage" class="page final-page">
+    <section class="final-card">
+      <div class="big-heart">♥</div>
+      <p class="tiny-label">the end... for now</p>
+      <h1>Made With Love</h1>
+      <p>I LOVE YOUUUUUUUUUUUU MWAAAAAAAAAAAA</p>
+      <button id="restartBtn" class="secondary-btn">Start again ♡</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
