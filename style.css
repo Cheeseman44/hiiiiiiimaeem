@@ -620,14 +620,14 @@ h1 {
   .gallery-next { right: -2px; }
 }
 
-/* Make the website use desktop-style sizing */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   body {
-    min-width: 880px;
+    min-width: 650px;
     overflow-x: auto;
+    overflow-y: auto;
   }
 
   .page {
-    min-width: 900px;
+    min-width: 650px;
   }
 }
