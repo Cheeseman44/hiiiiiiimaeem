@@ -621,9 +621,9 @@ h1 {
 }
 
 /* Make the website use desktop-style sizing */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   body {
-    min-width: 900px;
+    min-width: 880px;
     overflow-x: auto;
   }
 
