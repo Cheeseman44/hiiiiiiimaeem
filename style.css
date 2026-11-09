@@ -39,6 +39,7 @@ body {
 button { font: inherit; }
 
 .page {
+  height: auto;
   min-height: 100vh;
   display: none;
   place-items: center;
@@ -302,6 +303,8 @@ h1 {
   line-height: 1.7;
   background: #fff7fa;
   border-radius: 14px;
+  max-height: 50vh;
+  overflow-y: auto;
   border: 1px dashed #f3a6c1;
 }
 
