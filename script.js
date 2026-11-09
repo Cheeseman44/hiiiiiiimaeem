@@ -1,7 +1,7 @@
 // =============================
 // EASY CUSTOM SETTINGS
 // =============================
-const SECRET_CODE = "6767"; // Change this to your own code.
+const SECRET_CODE = "0302"; // Change this to your own code.
 const HINT = "something only we would know ♡"; // Change the hint.
 
 // =============================
